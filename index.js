@@ -10,7 +10,14 @@ const tutorials = [
   'what is the difference between event capturing and bubbling?',
   'what is JSONP?'
 ];
-
-const titleCased = () => {
-  return tutorials
+//How can we "iterate" through individual words in a string?
+function titleCased (first) {
+  let capital = tutorials.map((first) => {
+  first.split(" ");
+  return first
+  .split(" ")
+  .map((word) => word[0].toUpperCase() + word.slice(1))
+  .join(" ");
+  });
+  return capital;
 }
